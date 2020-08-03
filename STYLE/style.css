@@ -1,0 +1,212 @@
+@import url("https://use.typekit.net/gfz7vnr.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#d1b98b), to(#e3c994));
+  background-image: linear-gradient(to right, #d1b98b, #e3c994);
+  font-family: nocturne-serif, serif;
+}
+
+.todo-list {
+  height: 100%;
+  width: 100%;
+}
+
+.todo-list__main {
+  height: 100%;
+  width: 50%;
+  margin: 0 10% 0 auto;
+}
+
+.todo-list__bg {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background-image: radial-gradient(circle, #353432, #30302f);
+}
+
+.todo-list__h1 {
+  width: 50%;
+  margin-right: auto;
+  font-weight: 400;
+  color: #d1b98b;
+}
+
+.todo-list__task-creator {
+  margin-top: 10px;
+  width: 70%;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.todo-list__task-creator input {
+  font-family: nocturne-serif, serif;
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: .7;
+}
+
+.todo-list__task-creator input::-webkit-input-placeholder {
+  font-family: nocturne-serif-lights, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-list__task-creator input:-ms-input-placeholder {
+  font-family: nocturne-serif-lights, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-list__task-creator input::-ms-input-placeholder {
+  font-family: nocturne-serif-lights, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-list__task-creator input::placeholder {
+  font-family: nocturne-serif-lights, serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.todo-list__task-creator button {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  padding: 4px;
+  line-height: .6em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #d1b98b;
+  border-radius: 50%;
+  outline: none;
+}
+
+.todo-list__tasks {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.todo-list__task {
+  padding: 0 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-list__task-name {
+  font-weight: 400;
+  color: #fff;
+  opacity: .7;
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.todo-list__task-name input {
+  display: none;
+}
+
+.todo-list__task-label {
+  position: relative;
+  cursor: pointer;
+}
+
+.todo-list__task-label::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #d1b98b;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-list__task-label::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -20px;
+  width: 8px;
+  height: 8px;
+  background: #66a65c;
+  border-radius: 50%;
+  display: none;
+}
+
+.todo-list__task-name:hover label::after {
+  opacity: .6;
+}
+
+.todo-list__task-name input:checked ~ label::before {
+  display: block;
+}
+
+.todo-list__task-name input:checked ~ label {
+  text-decoration: line-through;
+  opacity: .6;
+}
+
+.todo-list__task-delete .fas {
+  color: #d1b98b;
+  opacity: .5;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-list__task-delete .fas:hover {
+  opacity: .3;
+}
+
+.todo-list-quote {
+  width: 100%;
+}
+
+.todo-list-quote__h1 {
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 21vw;
+  position: fixed;
+  bottom: 0;
+  line-height: .3em;
+  opacity: .2;
+}
+/*# sourceMappingURL=style.css.map */

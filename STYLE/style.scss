@@ -1,0 +1,171 @@
+@import 'config';
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, $golden-1, $golden-2);
+    font-family: nocturne-serif, serif;
+}
+
+.todo-list{
+    height: 100%;
+    width: 100%;
+
+    &__main{
+        height: 100%;
+        width: 50%;
+        margin: 0 10% 0 auto;
+    }
+
+    &__bg{
+        padding: 10px;
+        width: 100%;
+        height: auto;
+        background-image: radial-gradient(circle, $choco-1, $choco-2);
+    }
+
+    &__h1{
+        width: 50%;
+        margin-right: auto;
+        font-weight: map-get($font-weight, "regular");
+        color: $golden-1;
+    }
+
+    &__task-creator{
+        margin-top: 10px;
+        width: 70%;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid rgba(256, 256, 256, 0.1);
+
+        input{
+            font-family: nocturne-serif, serif;
+            width: 100%;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            font-weight: map-get($font-weight, "regular");
+            color: $white;
+            opacity: .7;
+
+            &::placeholder{
+                font-family: nocturne-serif-lights, serif;
+                font-style: italic;
+                font-size: 1rem;
+                color: rgba(256, 256, 256, 0.1);
+            }
+        }
+
+        button{
+            background: none;
+            border: none;
+            font-size: 3rem;
+            padding: 4px;
+            line-height: .6em;
+            background: rgba(256, 256, 256, 0.1);
+            color: $golden-1;
+            border-radius: 50%;
+            outline: none;
+        }
+    }
+
+    &__tasks{
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    &__task{
+        padding: 0 20px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+
+        &-name{
+            font-weight: map-get($font-weight, "regular");
+            color: $white;
+            opacity: .7;
+            display: block;
+            position: relative;
+            padding-left: 25px;
+            cursor: pointer;
+
+            input{
+                display: none;
+            }
+        }
+
+        &-label{
+            position: relative;
+            cursor: pointer;
+
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -25px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $golden-1;
+                border-radius: 50%;
+                @include transition(all, 0.3s);
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -20px;
+                width: 8px;
+                height: 8px;
+                background: $green;
+                border-radius: 50%;
+                display: none;
+            }
+        }
+
+        &-name:hover label::after{
+            opacity: .6;
+        }
+
+        &-name input:checked ~ label::before{
+            display: block;
+        }
+
+        &-name input:checked ~ label{
+            text-decoration: line-through;
+            opacity: .6;
+        }
+
+        &-delete{
+            .fas{
+                color: $golden-1;
+                opacity: .5;
+                cursor: pointer;
+                @include transition(all, 0.3s);
+                &:hover{
+                    opacity: .3;
+                }
+            }
+        }
+    }
+}
+
+.todo-list-quote{
+    width: 100%;
+    &__h1{
+        font-weight: map-get($font-weight, "medium");
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        font-size: 21vw;
+        position: fixed;
+        bottom: 0;
+        line-height: .3em;
+        opacity: .2;
+    }
+}

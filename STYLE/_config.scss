@@ -1,0 +1,19 @@
+@import url("https://use.typekit.net/gfz7vnr.css");
+
+$golden-1: #d1b98b;
+$golden-2: #e3c994;
+$choco-1: #353432;
+$choco-2: #30302f;
+$white: #fff;
+$green: #66a65c;
+$font-weight: ("regular": 400, "medium": 500);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin transition($property, $time) {
+    transition: $property $time ease-in-out;
+}
