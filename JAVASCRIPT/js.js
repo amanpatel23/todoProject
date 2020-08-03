@@ -1,7 +1,7 @@
 const todoLists = document.querySelector('.todo-list__tasks');
 const todoInput = document.querySelector('input[type="text"]');
 const todoTaskAdd = document.querySelector('button[type="submit"]');
-
+//second commit
 //event
 todoTaskAdd.addEventListener('click', addTask);
 todoLists.addEventListener('click', taskDelete);
