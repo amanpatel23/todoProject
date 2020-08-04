@@ -25,6 +25,20 @@ body {
   margin: 0 10% 0 auto;
 }
 
+@media screen and (max-width: 320px) {
+  .todo-list__main {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .todo-list__main {
+    width: 90%;
+    margin: auto;
+  }
+}
+
 .todo-list__bg {
   padding: 10px;
   width: 100%;
@@ -33,10 +47,16 @@ body {
 }
 
 .todo-list__h1 {
-  width: 50%;
+  width: 100%;
   margin-right: auto;
   font-weight: 400;
   color: #d1b98b;
+}
+
+@media screen and (max-width: 320px) {
+  .todo-list__h1 {
+    font-size: 1.5rem;
+  }
 }
 
 .todo-list__task-creator {
@@ -49,6 +69,19 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 320px) {
+  .todo-list__task-creator {
+    width: 100%;
+    margin-top: 6px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .todo-list__task-creator {
+    width: 100%;
+  }
 }
 
 .todo-list__task-creator input {
@@ -101,6 +134,12 @@ body {
   color: #d1b98b;
   border-radius: 50%;
   outline: none;
+}
+
+@media screen and (max-width: 320px) {
+  .todo-list__task-creator button {
+    font-size: 2.6rem;
+  }
 }
 
 .todo-list__tasks {
